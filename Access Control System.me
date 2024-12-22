@@ -1,0 +1,108 @@
+# Access Control System for Small Organizations
+
+## Project Overview
+This project implements a secure and efficient access control system for small organizations. Built with **Python** and **Flask**, it ensures robust **user authentication** and **role-based access control (RBAC)**, while prioritizing **data security**. The system serves as a prototype that can be extended with additional features for enhanced functionality and security.
+
+### Key Features
+- **User Authentication**: Secure login/logout functionality with password hashing.
+- **Role-Based Access Control (RBAC)**: Two primary roles—Admin and Regular User, each with specific permissions.
+- **User Management**: Admin-exclusive features for user registration, deletion, and viewing user lists.
+- **Profile Management**: Ability to edit personal details, change passwords, and upload profile pictures.
+- **Security Measures**: CSRF protection, session management, and cache control headers.
+
+### Technical Stack
+- **Backend**: Python with Flask framework
+- **Database**: SQLite with SQLAlchemy ORM
+- **Authentication**: Flask-Login
+- **Security**: Werkzeug for password hashing, Flask-WTF for CSRF protection
+- **Frontend**: Basic HTML templates (Implied, not shown in the provided code)
+
+---
+
+## Installation
+
+### Prerequisites
+Ensure you have Python 3 and **pip** installed on your machine.
+
+### Steps to Set Up the Project
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/access-control-system.git
+    ```
+2. **Navigate to the project directory:**
+    ```bash
+    cd access-control-system
+    ```
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. **Initialize the database:**
+    Run the script to set up the SQLite database:
+    ```bash
+    python setup_db.py
+    ```
+5. **Start the application:**
+    ```bash
+    python app.py
+    ```
+    The application will be running on `http://127.0.0.1:5000`.
+
+---
+
+## Features
+
+### User Authentication
+- Admins and regular users can log in and out securely.
+- Passwords are hashed using **Werkzeug** for secure storage.
+
+### Role-Based Access Control (RBAC)
+- **Admin** role can manage users (register, delete, view all users).
+- **Regular User** role has limited access to personal profile features.
+
+### User Management
+- Admins can register and delete users.
+- Admins can view a list of all registered users.
+
+### Profile Management
+- Users can edit their profile, change their password, and upload a profile picture.
+
+---
+
+## Security Features
+- **Password Hashing**: Passwords are hashed before storage using **Werkzeug**.
+- **CSRF Protection**: Implemented to prevent Cross-Site Request Forgery attacks.
+- **Session Management**: Secured session handling for users.
+- **Cache Control**: Prevents sensitive data from being cached.
+
+---
+
+## Testing
+
+### Test Cases
+1. Verify login/logout functionality.
+2. Test role-specific access control for Admin and Regular User.
+3. Check CRUD operations for user profiles.
+
+### Test Results
+All test cases passed successfully with full functionality.
+
+---
+
+## Future Enhancements
+- **Two-Factor Authentication (2FA)**: Enhance login security.
+- **Password Policies**: Implement password strength enforcement and expiration policies.
+- **Audit Logging**: Implement logs for user actions and security events.
+- **Enhanced UI/UX**: Use frameworks like React or Vue.js for a modern frontend experience.
+
+---
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+For any questions or feedback, feel free to reach out to me at:  
+Email: **your.email@example.com**
+
